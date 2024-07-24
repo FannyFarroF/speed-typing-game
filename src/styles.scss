@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root{
+    --bs-body-bg: #6a70d6 !important; /* Azul oscuro */
+    --bs-color-primary: #2a4777; /* Azul oscuro */
+    --bs-color-secondary: #4b4e75;
+    --bs-color-acent: #ff9f1c;
+    --bs-color-bns: #2ec4b6;
+    --bs-color-white: #ffffff;
+    --bs-color-black: #000000;
+    --bs-color-gray-light: #f0f0f0;
+    --bs-color-gray-dark: #404040;
+    --bs-color-blue-light: #6a70d6;
+    --bs-color-blue-dark: #1f2488;
+    --bs-color-green-light: #e6f780;
+    --bs-color-green-dark: #a4c01d;
+    --bs-color-orange: #ff9f1c;
+    --bs-color-red: #e63946;
+    --bs-color-yellow: #ffca3a;
+}
+
+*{
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+app-root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+app-home{
+    width: 100% !important;
+}
+
+.container{
+    height: 100%;
+}

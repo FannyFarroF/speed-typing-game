@@ -1,0 +1,44 @@
+.title{
+    color: var(--bs-color-white);
+    font-size: 3.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.content{
+    font-size: 1.5rem;
+}
+
+.box-text{
+    border-color: var(--bs-color-secondary) !important;
+    background-color: var(--bs-color-secondary);
+    color: var(--bs-color-primary) !important;
+    font-size: 1.4rem;
+}
+
+textarea{
+    color: var(--bs-color-white) !important;
+    font-size: 1.2rem;
+}
+
+.btn{
+    border-radius: 15px;
+    border: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--bs-color-white);
+    width: 150px;
+    background-color: var(--bs-color-acent) !important;
+}
+
+.card{
+    background-color: #555cd3 !important;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+img{
+    border-radius: 50%;
+}

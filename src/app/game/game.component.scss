@@ -1,0 +1,35 @@
+input{
+    border: 0;
+}
+
+.content-game__input input,
+.content-game__results div{
+    border-radius: 25px !important;
+    color: var(--bs-color-blue-dark) !important;
+    font-size: 25px !important;
+    font-weight: bold;
+}
+
+.item-card{
+    background-color: #555cd3 !important;
+    border-radius: 25px;
+}
+
+.content-game__title{
+    background-color: #555cd3 !important;
+    border-radius: 25px;
+}
+
+.content-game__word{
+    background: var(--bs-color-green-light) !important;
+    color: var(--bs-color-blue-dark);
+    border-radius: 25px !important;
+    font-size: 25px !important;
+    font-weight: bold;
+}
+
+input:focus{
+    border: 1px solid var(--bs-color-blue-dark) !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card py-4" *ngIf="!showGame">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-md-8 px-5">
+              <h2 class="title text-start">Juego de Mecanografía</h2>
+              <div class="content home">
+                  <div class="content text-white">
+                    <p class="my-3">¿Cuántas palabras puedes tipear en 60 segundos?</p>
+                    <button class="btn btn-primary" (click)="showWindowGame()">¡Iniciar!</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 px-5 text-center">
+              <img src="avatar.jpg" alt="Avatar" class="w-50">
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-game *ngIf="showGame"></app-game>
+    </div>
+  </div>
+</div>

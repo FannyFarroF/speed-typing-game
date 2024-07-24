@@ -1,0 +1,21 @@
+.card{
+    background-color: var(--bs-color-blue-light) !important;
+    border-radius: 25px;
+    border: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+img{
+    border-radius: 50%;
+    width: 150px !important;
+}
+p{
+    font-size: 1.5rem;
+}
+.results{
+    background: var(--bs-color-green-light) !important;
+    color: var(--bs-color-blue-dark) !important;
+}
+
+.btn{
+    border-radius: 15px;
+}

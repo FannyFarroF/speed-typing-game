@@ -1,0 +1,23 @@
+<div class="content-game my-3" *ngIf="time>0">
+    <div class="content-game__title p-4 text-center">
+        <h2 class="fw-bold text-white m-0"><i class="fas fa-keyboard"></i> Juego de Mecanografía </h2>
+    </div>
+    <div class="d-flex justify-content-between pb-2">
+        <div class="p-4">
+            <h3 class="fw-bold text-white m-0"> Score: {{ score }} </h3>
+        </div>
+        <div class="p-4 text-end">
+            <h3 class="fw-bold text-white m-0"> Time: {{ time }} </h3>
+        </div>
+    </div>
+    <div class="content-game__word p-4 bg-white color-dark">
+        <div class="text-center">
+            <h3 class="m-0">Escribe esto: <span class="fw-bold">"{{ word }}"</span></h3>
+        </div>
+    </div>
+    <div class="content-game__input mt-2">
+        <input type="text" class="form-control p-3 bg-white text-center" placeholder="" [(ngModel)]="written_word" (keydown)="onKeyDown($event)" (input)="compare_word()" [disabled]="time <= 0">
+    </div>
+</div>
+
+<app-results *ngIf="time <= 0" [score]="score" ></app-results>
