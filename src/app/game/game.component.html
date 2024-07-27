@@ -12,7 +12,9 @@
     </div>
     <div class="content-game__word p-4 bg-white color-dark">
         <div class="text-center">
-            <h3 class="m-0">Escribe esto: <span class="fw-bold">"{{ word }}"</span></h3>
+            <h3 class="m-0">Escribe esto: 
+                <span class="fw-bold" [ngClass]="letterStates[i]" *ngFor="let char of word.split(''), let i = index">{{ char }}</span>
+            </h3>
         </div>
     </div>
     <div class="content-game__input mt-2">

@@ -3,23 +3,28 @@
     <div class="col-md-12">
       <div class="card py-4" *ngIf="!showGame">
         <div class="card-body">
-          <div class="row align-items-center">
+          <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-8 px-5">
-              <h2 class="title text-start">Juego de Mecanografía</h2>
+              <h2 class="title ">Juego de Mecanografía</h2>
               <div class="content home">
                   <div class="content text-white">
                     <p class="my-3">¿Cuántas palabras puedes tipear en 60 segundos?</p>
-                    <button class="btn btn-primary" (click)="showWindowGame()">¡Iniciar!</button>
+                    <figure>
+                      <img src="avatar.jpg" alt="Avatar" class="w-25">
+                    </figure>
+                    <button class="btn btn-primary" (click)="showWindowGame()" *ngIf="!start">¡Iniciar!</button>
+                    <div class="d-flex text-center justify-content-center" *ngIf="start">
+                      <div class="spinner"></div>
+                    </div>
                   </div>
               </div>
             </div>
-            <div class="col-md-4 px-5 text-center">
-              <img src="avatar.jpg" alt="Avatar" class="w-50">
-            </div>
+            <!-- <div class="col-md-4 px-5 text-center">
+            </div> -->
           </div>
         </div>
       </div>
-      <app-game *ngIf="showGame"></app-game>
+      <app-game *ngIf="showGame" [words]="words"></app-game>
     </div>
   </div>
 </div>

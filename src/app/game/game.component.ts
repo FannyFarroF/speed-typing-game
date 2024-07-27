@@ -1,23 +1,31 @@
-import { Component, model } from '@angular/core';
-import { WordsService } from '../words.service';
-import { FormControl, FormsModule } from '@angular/forms';
+import { Component, ElementRef, Input, afterRender, model } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ResultsComponent } from '../results/results.component';
-import { NgIf } from '@angular/common';
+import { NgIf, NgFor, NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [FormsModule, ResultsComponent, NgIf],
+  imports: [FormsModule, ResultsComponent, NgIf, NgFor, NgClass],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
+
 export class GameComponent {
-  list = ['primera', 'nuestro', 'marina', 'número', 'lejano', 'placa']
-  word = 'nuestro';
-  written_word = '';
-  score = 0;
-  time = 0;
+  @Input() words = [];
+  written_word   = '';
+  word: string   = '';
+  score          = 0;
+  time           = 60;
+  result         = '';
   intervalo: any;
+  letterStates: string[] = [];
+
+  constructor(elementRef: ElementRef){
+    afterRender(()=>{
+      elementRef.nativeElement.querySelector('input')?.focus();
+    });
+  }
 
   ngOnInit(): void{
     this.loadWords();
@@ -31,8 +39,9 @@ export class GameComponent {
   }
   
   loadWords(): void{
-    const word = this.list[Math.floor(Math.random() * this.list.length)]
-    this.word = word;
+    this.word = this.words[Math.floor(Math.random() * this.words.length)];
+    this.word = this.word.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    this.letterStates = new Array(this.word.length).fill('');
   }
 
   temporizador(): void{
@@ -53,8 +62,12 @@ export class GameComponent {
     if (char === 'Backspace' || char === 'ArrowLeft' || char === 'ArrowRight' || char === 'Delete')
       return;
 
-    if (char !== this.word[nextCharIndex])
+    if (char !== this.word[nextCharIndex]){
       event.preventDefault();
+      this.letterStates[nextCharIndex] = 'correct';
+    }else{
+      this.letterStates[nextCharIndex] = 'incorrect';
+    }
   }
 
   compare_word(){

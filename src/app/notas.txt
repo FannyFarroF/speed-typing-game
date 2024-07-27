@@ -2,7 +2,10 @@
 ng generate component home
 ng generate component game
 ng generate component results
+ng generate component footer
 npm install bootstrap
 
 ng generate interface work
 ng generate interface project
+
+ng generate service words

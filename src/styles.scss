@@ -26,11 +26,18 @@
     font-style: normal;
 }
 
+body{
+    // background: linear-gradient(160deg, #6a70d6, #ff9f1c);
+    background: linear-gradient(160deg, #6a70d6, #151a65);
+}
+
 app-root{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
+    position: relative;
 }
 app-home{
     width: 100% !important;
@@ -38,4 +45,7 @@ app-home{
 
 .container{
     height: 100%;
+}
+a{
+    text-decoration: none !important;
 }
