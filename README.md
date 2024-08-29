@@ -1,6 +1,21 @@
 # SpeedTypingGame
+ 
+Este proyecto es una aplicación realizada en Angular que desafía a los usuarios a escribir el mayor número de palabras en 60 seg. El objetivo es medir la velocidad y precisión de la escritura del usuario en un entorno divertido e interactivo.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+## DEMO
+[link](https://typinggameffarro.netlify.app/)
+
+## Caracterísiticas
+- Muestra palabras aleatorias
+- Pinta de color rojo la letra tipeada de forma incorrecta, y no permite seguir escribriendo
+- Pinta de color verde la letra tipeada de forma correcta
+- Tiempo límite 60segundos
+- Al finalizar muestra el total de palabras tipeadas correctamente
+
+## Tecnologías
+- Angular v.18.0.6
+- TypeScript
+- API Restful
 
 ## Development server
 
